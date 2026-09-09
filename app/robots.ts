@@ -1,13 +1,12 @@
 import type { MetadataRoute } from 'next';
+import { absoluteSiteUrl } from '@/lib/site';
 
 export default function robots(): MetadataRoute.Robots {
-  const origin = 'https://echelon-foundry-culinary.kemiller2002.chatgpt.site';
-
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: `${origin}/sitemap.xml`,
+    sitemap: absoluteSiteUrl('/sitemap.xml'),
   };
 }

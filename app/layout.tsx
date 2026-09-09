@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Newsreader } from 'next/font/google';
+import { absoluteSiteUrl, siteOrigin } from '@/lib/site';
 import './globals.css';
 
 const geistSans = Geist({
@@ -19,19 +20,17 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    'https://echelon-foundry-culinary.kemiller2002.chatgpt.site',
-  ),
+  metadataBase: new URL(siteOrigin),
   title: {
     default: 'Echelon Foundry Culinary | Foodservice Operations & Technology',
     template: '%s | Echelon Foundry Culinary',
   },
   description:
     'Foodservice consulting for better operations, software, automation, AI, accessibility, workflow, and decision-making.',
-  alternates: { canonical: '/' },
+  alternates: { canonical: absoluteSiteUrl() },
   openGraph: {
     type: 'website',
-    url: '/',
+    url: absoluteSiteUrl(),
     siteName: 'Echelon Foundry Culinary',
     title: 'Echelon Foundry Culinary',
     description: 'Better foodservice operations, built on better technology.',

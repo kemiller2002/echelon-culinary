@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { absoluteSiteUrl } from '@/lib/site';
 
 export function createPageMetadata({
   title,
@@ -10,14 +11,15 @@ export function createPageMetadata({
   path: string;
 }): Metadata {
   const socialTitle = `${title} | Echelon Foundry Culinary`;
+  const canonicalUrl = absoluteSiteUrl(path);
 
   return {
     title,
     description,
-    alternates: { canonical: path },
+    alternates: { canonical: canonicalUrl },
     openGraph: {
       type: 'website',
-      url: path,
+      url: canonicalUrl,
       siteName: 'Echelon Foundry Culinary',
       title: socialTitle,
       description,
