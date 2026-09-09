@@ -11,6 +11,7 @@ const requiredRoutes = new Set([
   '/research',
   '/speaking',
 ]);
+const expectedOrigin = 'https://culinary.echelonfoundry.com';
 
 function walk(directory) {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -90,6 +91,62 @@ const requiredStatements = [
 for (const statement of requiredStatements) {
   if (!content.includes(statement)) {
     throw new Error(`Required positioning statement not found: ${statement}`);
+  }
+}
+
+const deploymentFiles = {
+  cname: readFileSync(join(root, 'public', 'CNAME'), 'utf8').trim(),
+  nextConfig: readFileSync(join(root, 'next.config.ts'), 'utf8'),
+  robots: readFileSync(join(root, 'public', 'robots.txt'), 'utf8'),
+  sitemap: readFileSync(join(root, 'public', 'sitemap.xml'), 'utf8'),
+  siteConfig: readFileSync(join(root, 'lib', 'site.ts'), 'utf8'),
+  workflow: readFileSync(
+    join(root, '.github', 'workflows', 'deploy-pages.yml'),
+    'utf8',
+  ),
+};
+const homepage = readFileSync(join(root, 'app', 'page.tsx'), 'utf8');
+const styles = readFileSync(join(root, 'app', 'globals.css'), 'utf8');
+
+if (deploymentFiles.cname !== 'culinary.echelonfoundry.com') {
+  throw new Error(
+    'GitHub Pages CNAME is not configured for the culinary site.',
+  );
+}
+
+if (!deploymentFiles.nextConfig.includes("output: 'export'")) {
+  throw new Error('The site is not configured for static export.');
+}
+
+for (const name of ['robots', 'sitemap', 'siteConfig']) {
+  if (!deploymentFiles[name].includes(expectedOrigin)) {
+    throw new Error(
+      `${name} does not reference the canonical culinary origin.`,
+    );
+  }
+}
+
+if (
+  !deploymentFiles.workflow.includes('actions/deploy-pages@v4') ||
+  !deploymentFiles.workflow.includes('path: dist/client')
+) {
+  throw new Error(
+    'GitHub Pages workflow is missing the expected deployment steps.',
+  );
+}
+
+if (homepage.includes('grid-field') || styles.includes('.grid-field')) {
+  throw new Error('The removed hero grid treatment has been reintroduced.');
+}
+
+for (const brandToken of [
+  '--paper: #f2efe7',
+  '--ink: #171a18',
+  '--burgundy: #905831',
+  'background: rgb(242 239 231 / 94%)',
+]) {
+  if (!styles.includes(brandToken)) {
+    throw new Error(`Parent-site visual token is missing: ${brandToken}`);
   }
 }
 

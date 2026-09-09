@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <SiteHeader current="home" />
       <main id="main-content">
-        <section className="hero grid-field" aria-labelledby="hero-title">
+        <section className="hero" aria-labelledby="hero-title">
           <div className="page-shell hero-grid">
             <div className="hero-copy">
               <p className="eyebrow">Echelon Foundry / Culinary practice</p>

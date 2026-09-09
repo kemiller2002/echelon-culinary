@@ -1,6 +1,5 @@
-export const siteOrigin = 'https://kemiller2002.github.io';
-export const siteBasePath = '/echelon-culinary';
-export const siteUrl = `${siteOrigin}${siteBasePath}`;
+export const siteOrigin = 'https://culinary.echelonfoundry.com';
+export const siteUrl = siteOrigin;
 
 export function absoluteSiteUrl(path = '/') {
   const normalizedPath = path === '/' ? '/' : `${path.replace(/\/$/, '')}/`;

@@ -1,16 +1,17 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Newsreader } from 'next/font/google';
+import { IBM_Plex_Mono, Manrope, Newsreader } from 'next/font/google';
 import { absoluteSiteUrl, siteOrigin } from '@/lib/site';
 import './globals.css';
 
-const geistSans = Geist({
+const manrope = Manrope({
   variable: '--font-sans-source',
   subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
+const ibmPlexMono = IBM_Plex_Mono({
   variable: '--font-mono-source',
   subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
 });
 
 const newsreader = Newsreader({
@@ -52,7 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${newsreader.variable}`}
+        className={`${manrope.variable} ${ibmPlexMono.variable} ${newsreader.variable}`}
       >
         <a className="skip-link" href="#main-content">
           Skip to main content
