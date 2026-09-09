@@ -965,12 +965,11 @@ a {
 }
 
 .page-intro-grid {
-  min-height: clamp(32rem, 67vh, 47rem);
   display: grid;
   grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.45fr);
   gap: clamp(3rem, 8vw, 9rem);
   align-items: end;
-  padding-block: clamp(5rem, 9vw, 8rem) 3rem;
+  padding: clamp(5rem, 11vw, 10rem) 0 clamp(3rem, 7vw, 7rem);
 }
 
 .page-intro h1 {
