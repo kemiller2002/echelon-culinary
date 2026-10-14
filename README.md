@@ -16,6 +16,7 @@ npm run lint
 npx tsc --noEmit
 npm run verify:site
 npm run build
+npm run ui:conformance   # builds, then Playwright conformance with schema-valid evidence
 ```
 
 The production build is a static export in `dist/client`.

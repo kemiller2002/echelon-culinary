@@ -10,7 +10,8 @@
     "build": "vinext build",
     "lint": "oxlint",
     "format": "oxfmt",
-    "verify:site": "node tests/site-integrity.mjs"
+    "verify:site": "node tests/site-integrity.mjs",
+    "ui:conformance": "npm run build && playwright test --config=playwright.ui-conformance.config.mjs && node tests/ui-conformance/validate-evidence.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",
@@ -34,12 +35,14 @@
     "vinext": "1.0.0-beta.9"
   },
   "devDependencies": {
+    "@playwright/test": "1.56.1",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",
     "@types/react": "19.2.14",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.2",
     "@vitejs/plugin-rsc": "0.5.34",
+    "ajv": "8.20.0",
     "oxfmt": "0.61.0",
     "oxlint": "1.76.0",
     "oxlint-tsgolint": "7.0.2001",
