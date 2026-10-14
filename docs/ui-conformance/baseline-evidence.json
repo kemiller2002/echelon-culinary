@@ -1,0 +1,1021 @@
+{
+  "standardVersion": "1.0.0",
+  "repository": "kemiller2002/echelon-culinary",
+  "revision": "8618187",
+  "classification": "site-ui",
+  "surfaces": [
+    {
+      "id": "chrome",
+      "path": "/* (shared header and footer on every route)",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [
+        {
+          "id": "primary-nav",
+          "relation": "centerline",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Home"
+            },
+            {
+              "role": "link",
+              "name": "Consulting"
+            },
+            {
+              "role": "link",
+              "name": "Clarity"
+            },
+            {
+              "role": "link",
+              "name": "Research"
+            },
+            {
+              "role": "link",
+              "name": "Speaking"
+            },
+            {
+              "role": "link",
+              "name": "About"
+            },
+            {
+              "role": "link",
+              "name": "Let's talk"
+            }
+          ],
+          "rationale": "ULI-L10: Primary navigation is one row of peer destinations in source order (declared at 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > chrome: primary-nav aligns at 1280px (tests/ui-conformance/site.spec.mjs:219)"
+          ]
+        },
+        {
+          "id": "header-row",
+          "relation": "centerline",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Echelon Foundry Culinary home"
+            },
+            {
+              "role": "disclosure",
+              "name": "Menu"
+            }
+          ],
+          "rationale": "ULI-L10: Brand and Menu share the header row on narrow screens (declared at 320, 390, 768px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > chrome: header-row aligns at 320px (tests/ui-conformance/site.spec.mjs:219)",
+            "passed: chromium > site.spec.mjs > chrome: header-row aligns at 390px (tests/ui-conformance/site.spec.mjs:219)",
+            "passed: chromium > site.spec.mjs > chrome: header-row aligns at 768px (tests/ui-conformance/site.spec.mjs:219)"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "id": "skip-link",
+          "control": {
+            "role": "link",
+            "name": "Skip to main content"
+          },
+          "intent": "Move to #main-content",
+          "expectedOutcome": "URL becomes #main-content and \"null\" is in view below the sticky header",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/skip-link is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: skip-link reaches #main-content at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > chrome: skip-link reaches #main-content at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "brand-home",
+          "control": {
+            "role": "link",
+            "name": "Echelon Foundry Culinary home"
+          },
+          "intent": "Navigate to /",
+          "expectedOutcome": "URL becomes / and the heading \"Better foodservice operations, built on better technology.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/brand-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: brand-home reaches / at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > chrome: brand-home reaches / at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-home",
+          "control": {
+            "role": "link",
+            "name": "Home"
+          },
+          "intent": "Navigate to /",
+          "expectedOutcome": "URL becomes / and the heading \"Better foodservice operations, built on better technology.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-home is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-home reaches / at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-consulting",
+          "control": {
+            "role": "link",
+            "name": "Consulting"
+          },
+          "intent": "Navigate to /consulting/",
+          "expectedOutcome": "URL becomes /consulting/ and the heading \"One operating problem. A proportionate next move.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-consulting reaches /consulting/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-clarity",
+          "control": {
+            "role": "link",
+            "name": "Clarity"
+          },
+          "intent": "Navigate to /clarity/",
+          "expectedOutcome": "URL becomes /clarity/ and the heading \"Before you automate, get clear.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-clarity reaches /clarity/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-research",
+          "control": {
+            "role": "link",
+            "name": "Research"
+          },
+          "intent": "Navigate to /research/",
+          "expectedOutcome": "URL becomes /research/ and the heading \"Practice informed by evidence, not appetite for novelty.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-research reaches /research/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-speaking",
+          "control": {
+            "role": "link",
+            "name": "Speaking"
+          },
+          "intent": "Navigate to /speaking/",
+          "expectedOutcome": "URL becomes /speaking/ and the heading \"A useful session should change a decision.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-speaking reaches /speaking/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-about",
+          "control": {
+            "role": "link",
+            "name": "About"
+          },
+          "intent": "Navigate to /about/",
+          "expectedOutcome": "URL becomes /about/ and the heading \"Echelon Foundry, applied to foodservice.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-about reaches /about/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "nav-contact",
+          "control": {
+            "role": "link",
+            "name": "Let's talk"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/nav-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: nav-contact reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-menu",
+          "control": {
+            "role": "disclosure",
+            "name": "Menu"
+          },
+          "intent": "Open the mobile navigation",
+          "expectedOutcome": "The menu opens and lists every destination with the current page marked; it closes again on a second activation",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: the Menu disclosure opens and closes at 320px (tests/ui-conformance/site.spec.mjs:186)",
+            "passed: chromium > site.spec.mjs > chrome: the Menu disclosure opens and closes at 390px (tests/ui-conformance/site.spec.mjs:186)",
+            "passed: chromium > site.spec.mjs > chrome: the Menu disclosure is operable by keyboard (tests/ui-conformance/site.spec.mjs:203)",
+            "passed: chromium > site.spec.mjs > chrome: the Menu disclosure opens and closes at 768px (tests/ui-conformance/site.spec.mjs:186)"
+          ],
+          "resetStrategy": "Activate Menu again, or navigate"
+        },
+        {
+          "id": "mobile-nav-home",
+          "control": {
+            "role": "link",
+            "name": "Home"
+          },
+          "intent": "Navigate to /",
+          "expectedOutcome": "URL becomes / and the heading \"Better foodservice operations, built on better technology.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-home reaches / at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-nav-consulting",
+          "control": {
+            "role": "link",
+            "name": "Consulting"
+          },
+          "intent": "Navigate to /consulting/",
+          "expectedOutcome": "URL becomes /consulting/ and the heading \"One operating problem. A proportionate next move.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-consulting reaches /consulting/ at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-nav-clarity",
+          "control": {
+            "role": "link",
+            "name": "Clarity"
+          },
+          "intent": "Navigate to /clarity/",
+          "expectedOutcome": "URL becomes /clarity/ and the heading \"Before you automate, get clear.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-clarity reaches /clarity/ at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-nav-research",
+          "control": {
+            "role": "link",
+            "name": "Research"
+          },
+          "intent": "Navigate to /research/",
+          "expectedOutcome": "URL becomes /research/ and the heading \"Practice informed by evidence, not appetite for novelty.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-research reaches /research/ at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-nav-speaking",
+          "control": {
+            "role": "link",
+            "name": "Speaking"
+          },
+          "intent": "Navigate to /speaking/",
+          "expectedOutcome": "URL becomes /speaking/ and the heading \"A useful session should change a decision.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-speaking reaches /speaking/ at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-nav-about",
+          "control": {
+            "role": "link",
+            "name": "About"
+          },
+          "intent": "Navigate to /about/",
+          "expectedOutcome": "URL becomes /about/ and the heading \"Echelon Foundry, applied to foodservice.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-about reaches /about/ at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "mobile-nav-contact",
+          "control": {
+            "role": "link",
+            "name": "Let's talk"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > chrome: mobile-nav-contact reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "footer-contact",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "fail",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "failed: chromium > site.spec.mjs > /contact/ link destinations > chrome/footer-contact is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: footer-contact reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > chrome: footer-contact reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "footer-email",
+          "control": {
+            "role": "link",
+            "name": "kevin@echelonfoundry.com"
+          },
+          "intent": "Compose mail to kevin@echelonfoundry.com",
+          "expectedOutcome": "href is mailto:kevin@echelonfoundry.com (the mail client is outside the page; delivery is not claimed)",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/footer-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: footer-email points at mailto:kevin@echelonfoundry.com (tests/ui-conformance/site.spec.mjs:173)"
+          ]
+        },
+        {
+          "id": "footer-parent",
+          "control": {
+            "role": "link",
+            "name": "Parent practice ↗"
+          },
+          "intent": "Open https://echelonfoundry.com",
+          "expectedOutcome": "href is https://echelonfoundry.com over https (the external site is not loaded)",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /research/ link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /about/ link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > chrome/footer-parent is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > chrome: footer-parent points at https://echelonfoundry.com (tests/ui-conformance/site.spec.mjs:173)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > every desktop chrome action is reachable by keyboard (tests/ui-conformance/site.spec.mjs:237)",
+        "alignment group footer-actions (left-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L10: Footer contact actions stack on one left edge at and below 48rem (declared at 320, 390, 768px); peers link \"Discuss a foodservice problem\", link \"kevin@echelonfoundry.com\"; 3 measurement(s): passed: chromium > site.spec.mjs > chrome: footer-actions aligns at 320px (tests/ui-conformance/site.spec.mjs:219); passed: chromium > site.spec.mjs > chrome: footer-actions aligns at 390px (tests/ui-conformance/site.spec.mjs:219); passed: chromium > site.spec.mjs > chrome: footer-actions aligns at 768px (tests/ui-conformance/site.spec.mjs:219)",
+        "alignment group footer-actions-wide (right-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L10: Footer contact actions align to the footer's right edge on wide layouts (declared at 1280px); peers link \"Discuss a foodservice problem\", link \"kevin@echelonfoundry.com\"; 1 measurement(s): passed: chromium > site.spec.mjs > chrome: footer-actions-wide aligns at 1280px (tests/ui-conformance/site.spec.mjs:219)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "home",
+      "path": "/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [
+        {
+          "id": "hero-actions-row",
+          "relation": "top-edge",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Discuss a foodservice problem"
+            },
+            {
+              "role": "link",
+              "name": "Explore Clarity"
+            }
+          ],
+          "rationale": "ULI-L10: Hero calls to action share one row (declared at 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > home: hero-actions-row aligns at 1280px (tests/ui-conformance/site.spec.mjs:219)"
+          ]
+        },
+        {
+          "id": "hero-actions-row-height",
+          "relation": "bottom-edge",
+          "toleranceCssPx": 1,
+          "targets": [
+            {
+              "role": "link",
+              "name": "Discuss a foodservice problem"
+            },
+            {
+              "role": "link",
+              "name": "Explore Clarity"
+            }
+          ],
+          "rationale": "ULI-L02: Hero calls to action have one height (declared at 1280px)",
+          "evidence": [
+            "status: pass",
+            "passed: chromium > site.spec.mjs > home: hero-actions-row-height aligns at 1280px (tests/ui-conformance/site.spec.mjs:219)"
+          ]
+        }
+      ],
+      "actions": [
+        {
+          "id": "home-hero-discuss",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-hero-discuss is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-hero-discuss reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-hero-discuss reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-hero-clarity",
+          "control": {
+            "role": "link",
+            "name": "Explore Clarity"
+          },
+          "intent": "Navigate to /clarity/",
+          "expectedOutcome": "URL becomes /clarity/ and the heading \"Before you automate, get clear.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-hero-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-hero-clarity reaches /clarity/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-hero-clarity reaches /clarity/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-consulting",
+          "control": {
+            "role": "link",
+            "name": "Explore the consulting practice"
+          },
+          "intent": "Navigate to /consulting/",
+          "expectedOutcome": "URL becomes /consulting/ and the heading \"One operating problem. A proportionate next move.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-consulting is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-consulting reaches /consulting/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-consulting reaches /consulting/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-clarity",
+          "control": {
+            "role": "link",
+            "name": "See Clarity applied to foodservice"
+          },
+          "intent": "Navigate to /clarity/",
+          "expectedOutcome": "URL becomes /clarity/ and the heading \"Before you automate, get clear.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-clarity reaches /clarity/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-clarity reaches /clarity/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-engagements",
+          "control": {
+            "role": "link",
+            "name": "View all consulting engagements"
+          },
+          "intent": "Move to /consulting/#engagements",
+          "expectedOutcome": "URL becomes /consulting/#engagements and \"Clear work. Clear outcome.\" is in view below the sticky header",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-engagements is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-engagements reaches /consulting/#engagements at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-engagements reaches /consulting/#engagements at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-about",
+          "control": {
+            "role": "link",
+            "name": "Read the practice story"
+          },
+          "intent": "Navigate to /about/",
+          "expectedOutcome": "URL becomes /about/ and the heading \"Echelon Foundry, applied to foodservice.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-about is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-about reaches /about/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-about reaches /about/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-speaking",
+          "control": {
+            "role": "link",
+            "name": "Explore the session"
+          },
+          "intent": "Navigate to /speaking/",
+          "expectedOutcome": "URL becomes /speaking/ and the heading \"A useful session should change a decision.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-speaking is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-speaking reaches /speaking/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-speaking reaches /speaking/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-research",
+          "control": {
+            "role": "link",
+            "name": "See current lines of inquiry"
+          },
+          "intent": "Navigate to /research/",
+          "expectedOutcome": "URL becomes /research/ and the heading \"Practice informed by evidence, not appetite for novelty.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-research is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-research reaches /research/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-research reaches /research/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "home-cta",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > / link destinations > home/home-cta is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > home: home-cta reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > home: home-cta reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > / renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 390px > / renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 390px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > / renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 1280px > / renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > / renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > / reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > / reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > / reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > / reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > reduced motion removes smooth scrolling and transitions (tests/ui-conformance/site.spec.mjs:248)",
+        "passed: chromium > site.spec.mjs > forced colors keep filled controls bounded and navigation visible (tests/ui-conformance/site.spec.mjs:257)",
+        "alignment group hero-actions-stack (left-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L10: Hero calls to action stack as full-width peers at and below 48rem (declared at 320, 390, 768px); peers link \"Discuss a foodservice problem\", link \"Explore Clarity\"; 3 measurement(s): passed: chromium > site.spec.mjs > home: hero-actions-stack aligns at 320px (tests/ui-conformance/site.spec.mjs:219); passed: chromium > site.spec.mjs > home: hero-actions-stack aligns at 390px (tests/ui-conformance/site.spec.mjs:219); passed: chromium > site.spec.mjs > home: hero-actions-stack aligns at 768px (tests/ui-conformance/site.spec.mjs:219)",
+        "alignment group hero-actions-stack-width (right-edge; not expressible in the schema 1.0.0 relation enum) status pass: ULI-L02: Stacked hero calls to action have one width (declared at 320, 390, 768px); peers link \"Discuss a foodservice problem\", link \"Explore Clarity\"; 3 measurement(s): passed: chromium > site.spec.mjs > home: hero-actions-stack-width aligns at 320px (tests/ui-conformance/site.spec.mjs:219); passed: chromium > site.spec.mjs > home: hero-actions-stack-width aligns at 390px (tests/ui-conformance/site.spec.mjs:219); passed: chromium > site.spec.mjs > home: hero-actions-stack-width aligns at 768px (tests/ui-conformance/site.spec.mjs:219)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "consulting",
+      "path": "/consulting/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "consulting-clarity",
+          "control": {
+            "role": "link",
+            "name": "See how the decision is made"
+          },
+          "intent": "Navigate to /clarity/",
+          "expectedOutcome": "URL becomes /clarity/ and the heading \"Before you automate, get clear.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > consulting/consulting-clarity is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > consulting: consulting-clarity reaches /clarity/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > consulting: consulting-clarity reaches /clarity/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        },
+        {
+          "id": "consulting-cta",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /consulting/ link destinations > consulting/consulting-cta is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > consulting: consulting-cta reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > consulting: consulting-cta reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > /consulting/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 320px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /consulting/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 390px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /consulting/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /consulting/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /consulting/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /consulting/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /consulting/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > /consulting/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /consulting/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "clarity",
+      "path": "/clarity/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "clarity-cta",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /clarity/ link destinations > clarity/clarity-cta is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > clarity: clarity-cta reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > clarity: clarity-cta reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 320px > /clarity/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 390px > /clarity/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 390px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /clarity/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /clarity/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /clarity/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /clarity/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /clarity/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > /clarity/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /clarity/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "research",
+      "path": "/research/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "research-echelon",
+          "control": {
+            "role": "link",
+            "name": "Explore Echelon research ↗"
+          },
+          "intent": "Open https://echelonfoundry.com/research/",
+          "expectedOutcome": "href is https://echelonfoundry.com/research/ over https (the external site is not loaded)",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-echelon is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > research: research-echelon points at https://echelonfoundry.com/research/ (tests/ui-conformance/site.spec.mjs:173)"
+          ]
+        },
+        {
+          "id": "research-cta",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /research/ link destinations > research/research-cta is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > research: research-cta reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > research: research-cta reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > /research/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 320px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /research/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /research/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /research/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 1280px > /research/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /research/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /research/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > /research/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /research/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "speaking",
+      "path": "/speaking/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "speaking-cta",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /speaking/ link destinations > speaking/speaking-cta is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > speaking: speaking-cta reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > speaking: speaking-cta reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > /speaking/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 320px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /speaking/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /speaking/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 1280px > /speaking/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 1280px > /speaking/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /speaking/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /speaking/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > /speaking/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /speaking/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "about",
+      "path": "/about/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "about-cta",
+          "control": {
+            "role": "link",
+            "name": "Discuss a foodservice problem"
+          },
+          "intent": "Navigate to /contact/",
+          "expectedOutcome": "URL becomes /contact/ and the heading \"Bring us a foodservice problem.\" is shown",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /about/ link destinations > about/about-cta is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > about: about-cta reaches /contact/ at 390px (tests/ui-conformance/site.spec.mjs:141)",
+            "passed: chromium > site.spec.mjs > about: about-cta reaches /contact/ at 1280px (tests/ui-conformance/site.spec.mjs:141)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > /about/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 320px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /about/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /about/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 1280px > /about/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /about/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /about/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /about/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > /about/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /about/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    },
+    {
+      "id": "contact",
+      "path": "/contact/",
+      "kind": "marketing",
+      "status": "fail",
+      "viewportWidths": [
+        320,
+        390,
+        768,
+        1280
+      ],
+      "alignmentGroups": [],
+      "actions": [
+        {
+          "id": "contact-email",
+          "control": {
+            "role": "link",
+            "name": "kevin@echelonfoundry.com"
+          },
+          "intent": "Compose mail to kevin@echelonfoundry.com",
+          "expectedOutcome": "href is mailto:kevin@echelonfoundry.com?subject=A%20foodservice%20problem (the mail client is outside the page; delivery is not claimed)",
+          "status": "pass",
+          "evidence": [
+            "passed: chromium > site.spec.mjs > /contact/ link destinations > contact/contact-email is valid (tests/ui-conformance/site.spec.mjs:101)",
+            "passed: chromium > site.spec.mjs > contact: contact-email points at mailto:kevin@echelonfoundry.com?subject=A%20foodservice%20problem (tests/ui-conformance/site.spec.mjs:173)"
+          ]
+        }
+      ],
+      "evidence": [
+        "passed: chromium > site.spec.mjs > at 320px > /contact/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 320px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 390px > /contact/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 390px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 768px > /contact/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 768px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "passed: chromium > site.spec.mjs > at 1280px > /contact/ renders only declared actions (tests/ui-conformance/site.spec.mjs:62)",
+        "passed: chromium > site.spec.mjs > at 1280px > /contact/ renders without overflow, with intact navigation labels (tests/ui-conformance/site.spec.mjs:42)",
+        "failed: chromium > site.spec.mjs > at 320px with 200% text > /contact/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "failed: chromium > site.spec.mjs > at 390px with 200% text > /contact/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 768px with 200% text > /contact/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)",
+        "passed: chromium > site.spec.mjs > at 1280px with 200% text > /contact/ reflows without overflow (tests/ui-conformance/site.spec.mjs:82)"
+      ],
+      "unknownScope": [
+        "Translated and right-to-left text are not exercised (the site ships English only).",
+        "Browser page zoom is approximated by the contract widths plus a 200% default text size; WebKit and Firefox are not exercised.",
+        "Availability of external destinations and mail delivery are not verified; only their href is asserted.",
+        "The suite serves the static export (dist/client) the way GitHub Pages does; the live custom domain is not requested."
+      ]
+    }
+  ],
+  "exceptions": [],
+  "notes": "Contract visual-engineering/UI-LAYOUT-INTERACTION@1.0.0 (kemiller2002/visual-engineering@8da8fbc). Helpers: @echelon-foundry/forma-conformance 0.1.0 vendored from kemiller2002/forma@f37be16 (forma main). Generated by npm run ui:conformance; statuses derive only from executed Playwright tests."
+}

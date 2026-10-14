@@ -81,7 +81,7 @@ export function SiteHeader({ current }: { current?: NavKey }) {
   );
 }
 
-export function SiteFooter() {
+export function SiteFooter({ current }: { current?: NavKey }) {
   return (
     <footer className="site-footer">
       <div className="page-shell footer-grid">
@@ -90,7 +90,10 @@ export function SiteFooter() {
           <p>Foodservice operations, decision-making, and technology.</p>
         </div>
         <div className="footer-contact">
-          <Link href="/contact">
+          <Link
+            href="/contact"
+            aria-current={current === 'contact' ? 'page' : undefined}
+          >
             Discuss a foodservice problem
             <ArrowUpRight aria-hidden="true" size={17} strokeWidth={1.8} />
           </Link>
